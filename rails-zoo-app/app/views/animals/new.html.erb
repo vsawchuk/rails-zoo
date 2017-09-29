@@ -1,0 +1,10 @@
+<h1>Add an animal</h1>
+<%= form_for @animal do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.label :species %>
+  <%= f.text_field :species, required: true %>
+  <%= f.label :age %>
+  <%= f.number_field :age, min: 0, required: true %>
+  <%= f.submit 'Add animal' %>
+<% end %>
